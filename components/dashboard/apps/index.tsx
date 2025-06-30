@@ -31,7 +31,7 @@ export function AppsTab() {
 
   if (apps.length === 0) {
     return (
-      <div className="h-[calc(100dvh-140px)] flex items-center justify-center p-4">
+      <div className="h-[calc(100dvh-76px)] flex items-center justify-center p-4">
         <Alert className="max-w-md">
           <Shield className="h-4 w-4" />
           <AlertDescription className="ml-2">
@@ -44,8 +44,8 @@ export function AppsTab() {
   }
 
   return (
-    <ScrollArea className="h-[calc(100dvh-140px)]">
-      <div className="p-4 space-y-4">
+    <ScrollArea className="h-[calc(100dvh-76px)]">
+      <div className="p-4 space-y-4 min-h-full">
         {/* Search Input */}
         <div className="sticky top-0 z-10 pb-4 bg-background/80 backdrop-blur-sm">
           <div className="relative">
@@ -75,7 +75,7 @@ export function AppsTab() {
             </AlertDescription>
           </Alert>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 min-h-[calc(100vh-200px)]">
             {filteredApps.map((app) => (
               <AppCard key={app.id} app={app} onRevoke={handleRevoke} />
             ))}

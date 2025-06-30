@@ -29,7 +29,7 @@ export function HomeTab() {
 
   if (requests.length === 0) {
     return (
-      <div className="h-[calc(100dvh-140px)] flex items-center justify-center p-4">
+      <div className="h-[calc(100dvh-76px)] flex items-center justify-center p-4">
         <Alert className="max-w-md">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription className="ml-2">
@@ -42,7 +42,7 @@ export function HomeTab() {
   }
 
   return (
-    <ScrollArea className="h-[calc(100dvh-140px)]">
+    <ScrollArea className="h-[calc(100dvh-76px)]">
       <div className="px-4 py-2">
         {requests.map((request) => (
           <RequestCard
