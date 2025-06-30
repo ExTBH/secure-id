@@ -37,7 +37,7 @@ export default function QrDemoPage() {
               <div className="text-xs text-muted-foreground mb-3">
                 Example: Scan to authorize payment at NBB Bank
               </div>
-              <Link href="/qr-demo/scanner" passHref legacyBehavior>
+              <Link href="/qr-demo/scanner" passHref>
                 <Button size="sm" className="w-full">
                   <QrCode className="w-4 h-4 mr-2" />
                   Start User Simulation
@@ -58,7 +58,7 @@ export default function QrDemoPage() {
               <div className="text-xs text-muted-foreground mb-3">
                 Example: Display QR for eGov service login
               </div>
-              <Link href="/qr-demo/provider" passHref legacyBehavior>
+              <Link href="/qr-demo/provider" passHref>
                 <Button size="sm" className="w-full">
                   <QrCode className="w-4 h-4 mr-2" />
                   Generate QR Code

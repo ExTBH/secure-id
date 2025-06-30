@@ -55,7 +55,7 @@ export default function Home() {
               <Shield className="w-4 h-4 mr-2" />
               Open Dashboard
             </Button>
-            <Link href="/qr-demo" passHref legacyBehavior>
+            <Link href="/qr-demo" passHref>
               <Button
                 size="lg"
                 variant="secondary"
