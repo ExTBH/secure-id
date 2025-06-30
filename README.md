@@ -10,11 +10,14 @@ A revolutionary digital identity verification platform developed as academic res
 _Submitted for Yusuf Bin Ahmed Kanoo Award_  
 Bahrain Polytechnic
 
+📄 **[View Complete Research Paper](./research.pdf)** - Comprehensive 54-page research document detailing SecureID's technical implementation, business model, and market analysis.
+
 ---
 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Research Paper](#research-recognition)
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
@@ -371,6 +374,8 @@ For commercial licensing inquiries, please contact the development team.
 **Academic Research Project**  
 _Submitted for Yusuf Bin Ahmed Kanoo Award_  
 Bahrain Polytechnic
+
+📄 **[Complete Research Documentation](./research.pdf)** - 54-page comprehensive research paper covering technical architecture, business model, market analysis, and implementation details.
 
 This research project demonstrates innovation in digital identity solutions with significant potential for enhancing Bahrain's fintech ecosystem and positioning the kingdom as a regional leader in banking security innovation.
 
