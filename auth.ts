@@ -1,14 +1,9 @@
 import { getUserByUserID } from '@/database'
 import { SLoginRequest, TJWTScope } from '@/schemas'
-import NextAuth from 'next-auth'
+import NextAuth, { NextAuthConfig } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 
-async function initiateKYC(userid: string) {
-  console.log(`Initiaing KYC for user: ${getUserByUserID(userid)}`)
-  return { success: true, verified: true }
-}
-
-export const { handlers, auth, signIn, signOut } = NextAuth({
+const config: NextAuthConfig = {
   providers: [
     CredentialsProvider({
       name: 'secure-id',
@@ -30,9 +25,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
     }),
   ],
-  jwt: {
-    secret: process.env.NEXTAUTH_SECRET || 'your-local-secret',
-  },
   session: {
     strategy: 'jwt',
   },
@@ -53,7 +45,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return session
     },
   },
-})
+}
+
+async function initiateKYC(userid: string) {
+  console.log(`Initiaing KYC for user: ${getUserByUserID(userid)}`)
+  return { success: true, verified: true }
+}
+
+export const { handlers, auth, signIn, signOut } = NextAuth(config)
 
 // Helper functions for scope management
 export async function upgradeUserScopes(

@@ -1,4 +1,8 @@
+// types/next-auth.d.ts
 import { TJWTScope } from '@/schemas'
+
+import 'next-auth'
+import 'next-auth/jwt'
 
 declare module 'next-auth' {
   interface User {

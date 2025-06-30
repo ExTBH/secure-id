@@ -1,4 +1,4 @@
-import { auth } from '@/lib/auth'
+import { auth } from '@/auth'
 import { TJWTScope } from '@/schemas'
 import { Session } from 'next-auth'
 import { NextRequest, NextResponse } from 'next/server'
@@ -11,8 +11,6 @@ export function withScopes(requiredScopes: TJWTScope | TJWTScope[]) {
     ) => Response | Promise<Response>
   ) {
     return async (request: NextRequest) => {
-      console.log(typeof auth)
-
       const _session: Session = await auth()
 
       if (!_session?.user) {
