@@ -4,6 +4,7 @@ import Dashboard from '@/components/dashboard'
 import { Button } from '@/components/ui/button'
 import { QrCode, Shield, Smartphone } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Home() {
@@ -54,16 +55,16 @@ export default function Home() {
               <Shield className="w-4 h-4 mr-2" />
               Open Dashboard
             </Button>
-
-            <Button
-              size="lg"
-              variant="secondary"
-              className="w-full h-12 font-medium"
-            >
-              <QrCode className="w-4 h-4 mr-2" />
-              QR Auth Flow
-            </Button>
-
+            <Link href="/qr-demo" passHref legacyBehavior>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="w-full h-12 font-medium"
+              >
+                <QrCode className="w-4 h-4 mr-2" />
+                QR Auth Flow
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
