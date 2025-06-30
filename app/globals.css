@@ -25,11 +25,6 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-success: var(--success);
-  --color-success-foreground: var(--success-foreground);
-  --color-warning: var(--warning);
-  --color-warning-foreground: var(--warning-foreground);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -49,143 +44,164 @@
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.625rem;
+  /* Base colors */
+  --background: #FFFFFF;
+  /* White */
+  --foreground: #334155;
+  /* Charcoal */
+  --card: #FFFFFF;
+  /* White */
+  --card-foreground: #334155;
+  /* Charcoal */
+  --popover: #FFFFFF;
+  /* White */
+  --popover-foreground: #334155;
+  /* Charcoal */
 
-  /* Base colors - Clean white/light gray */
-  --background: oklch(0.99 0 0);
-  --foreground: oklch(0.15 0.01 270);
+  /* Primary - Berkeley Blue */
+  --primary: #1B365D;
+  /* Berkeley Blue */
+  --primary-foreground: #FFFFFF;
+  /* White */
 
-  /* Card styling - Subtle blue-gray tint */
-  --card: oklch(0.98 0.005 240);
-  --card-foreground: oklch(0.15 0.01 270);
+  /* Secondary - Light variations */
+  --secondary: #F8FAFC;
+  /* Seasalt */
+  --secondary-foreground: #334155;
+  /* Charcoal */
 
-  /* Popover styling */
-  --popover: oklch(0.98 0.005 240);
-  --popover-foreground: oklch(0.15 0.01 270);
+  /* Muted - Slate grays */
+  --muted: #F8FAFC;
+  /* Seasalt */
+  --muted-foreground: #64748B;
+  /* Slate gray */
 
-  /* Primary - Banking blue */
-  --primary: oklch(0.45 0.15 240);
-  --primary-foreground: oklch(0.98 0 0);
+  /* Accent - Orange */
+  --accent: #D97706;
+  /* Ochre */
+  --accent-foreground: #FFFFFF;
+  /* White */
 
-  /* Secondary - Light blue-gray */
-  --secondary: oklch(0.94 0.02 240);
-  --secondary-foreground: oklch(0.25 0.05 240);
+  /* UI elements */
+  --destructive: #dc2626;
+  /* Red for errors */
+  --border: #e2e8f0;
+  /* Light border */
+  --input: #f1f5f9;
+  /* Input background */
+  --ring: #1B365D;
+  /* Berkeley Blue for focus rings */
 
-  /* Muted - Subtle background */
-  --muted: oklch(0.96 0.01 240);
-  --muted-foreground: oklch(0.55 0.02 240);
+  /* Charts using your palette */
+  --chart-1: #1B365D;
+  /* Berkeley Blue */
+  --chart-2: #D97706;
+  /* Ochre */
+  --chart-3: #64748B;
+  /* Slate gray */
+  --chart-4: #334155;
+  /* Charcoal */
+  --chart-5: #F8FAFC;
+  /* Seasalt */
 
-  /* Accent - Teal accent */
-  --accent: oklch(0.92 0.03 180);
-  --accent-foreground: oklch(0.2 0.08 180);
-
-  /* Success - Banking green */
-  --success: oklch(0.55 0.15 140);
-  --success-foreground: oklch(0.98 0 0);
-
-  /* Warning - Banking orange */
-  --warning: oklch(0.65 0.18 70);
-  --warning-foreground: oklch(0.98 0 0);
-
-  /* Destructive - Banking red */
-  --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: oklch(0.98 0 0);
-
-  /* Borders and inputs */
-  --border: oklch(0.88 0.01 240);
-  --input: oklch(0.88 0.01 240);
-  --ring: oklch(0.45 0.15 240);
-
-  /* Chart colors - Banking palette */
-  --chart-1: oklch(0.45 0.15 240);
-  /* Primary blue */
-  --chart-2: oklch(0.55 0.15 140);
-  /* Success green */
-  --chart-3: oklch(0.65 0.18 70);
-  /* Warning orange */
-  --chart-4: oklch(0.5 0.12 180);
-  /* Teal */
-  --chart-5: oklch(0.35 0.1 240);
-  /* Dark blue */
-
-  /* Sidebar - Professional blue theme */
-  --sidebar: oklch(0.97 0.005 240);
-  --sidebar-foreground: oklch(0.2 0.05 240);
-  --sidebar-primary: oklch(0.45 0.15 240);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.92 0.03 180);
-  --sidebar-accent-foreground: oklch(0.2 0.08 180);
-  --sidebar-border: oklch(0.85 0.02 240);
-  --sidebar-ring: oklch(0.45 0.15 240);
+  /* Sidebar */
+  --sidebar: #F8FAFC;
+  /* Seasalt */
+  --sidebar-foreground: #334155;
+  /* Charcoal */
+  --sidebar-primary: #1B365D;
+  /* Berkeley Blue */
+  --sidebar-primary-foreground: #FFFFFF;
+  /* White */
+  --sidebar-accent: #D97706;
+  /* Ochre */
+  --sidebar-accent-foreground: #FFFFFF;
+  /* White */
+  --sidebar-border: #e2e8f0;
+  /* Light border */
+  --sidebar-ring: #1B365D;
+  /* Berkeley Blue */
 }
 
 .dark {
-  /* Dark background - Deep navy */
-  --background: oklch(0.12 0.02 240);
-  --foreground: oklch(0.95 0.01 240);
+  /* Dark mode adjustments */
+  --background: #1B365D;
+  /* Berkeley Blue as dark bg */
+  --foreground: #F8FAFC;
+  /* Seasalt */
+  --card: #334155;
+  /* Charcoal */
+  --card-foreground: #F8FAFC;
+  /* Seasalt */
+  --popover: #334155;
+  /* Charcoal */
+  --popover-foreground: #F8FAFC;
+  /* Seasalt */
 
-  /* Dark cards - Slightly lighter navy */
-  --card: oklch(0.16 0.02 240);
-  --card-foreground: oklch(0.95 0.01 240);
+  /* Primary inverted for dark mode */
+  --primary: #F8FAFC;
+  /* Seasalt */
+  --primary-foreground: #1B365D;
+  /* Berkeley Blue */
 
-  /* Dark popover */
-  --popover: oklch(0.16 0.02 240);
-  --popover-foreground: oklch(0.95 0.01 240);
+  /* Secondary */
+  --secondary: #64748B;
+  /* Slate gray */
+  --secondary-foreground: #F8FAFC;
+  /* Seasalt */
 
-  /* Primary - Bright banking blue */
-  --primary: oklch(0.65 0.2 240);
-  --primary-foreground: oklch(0.12 0.02 240);
+  /* Muted */
+  --muted: #64748B;
+  /* Slate gray */
+  --muted-foreground: #F8FAFC;
+  /* Seasalt */
 
-  /* Secondary - Dark blue-gray */
-  --secondary: oklch(0.22 0.03 240);
-  --secondary-foreground: oklch(0.9 0.01 240);
+  /* Accent remains orange but adjusted */
+  --accent: #D97706;
+  /* Ochre */
+  --accent-foreground: #FFFFFF;
+  /* White */
 
-  /* Muted - Darker blue-gray */
-  --muted: oklch(0.2 0.03 240);
-  --muted-foreground: oklch(0.7 0.02 240);
+  /* UI elements for dark */
+  --destructive: #ef4444;
+  /* Lighter red for dark mode */
+  --border: rgba(248, 250, 252, 0.1);
+  /* Subtle border */
+  --input: rgba(248, 250, 252, 0.05);
+  /* Subtle input bg */
+  --ring: #D97706;
+  /* Orange for focus in dark */
 
-  /* Accent - Bright teal */
-  --accent: oklch(0.25 0.05 180);
-  --accent-foreground: oklch(0.85 0.08 180);
+  /* Charts in dark mode */
+  --chart-1: #F8FAFC;
+  /* Seasalt */
+  --chart-2: #D97706;
+  /* Ochre */
+  --chart-3: #64748B;
+  /* Slate gray */
+  --chart-4: #334155;
+  /* Charcoal */
+  --chart-5: #1B365D;
+  /* Berkeley Blue */
 
-  /* Success - Bright green */
-  --success: oklch(0.65 0.18 140);
-  --success-foreground: oklch(0.12 0.02 240);
-
-  /* Warning - Bright orange */
-  --warning: oklch(0.75 0.2 70);
-  --warning-foreground: oklch(0.12 0.02 240);
-
-  /* Destructive - Bright red */
-  --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.95 0.01 240);
-
-  /* Dark borders and inputs */
-  --border: oklch(0.3 0.03 240);
-  --input: oklch(0.25 0.03 240);
-  --ring: oklch(0.65 0.2 240);
-
-  /* Dark chart colors */
-  --chart-1: oklch(0.65 0.2 240);
-  /* Bright blue */
-  --chart-2: oklch(0.65 0.18 140);
-  /* Bright green */
-  --chart-3: oklch(0.75 0.2 70);
-  /* Bright orange */
-  --chart-4: oklch(0.6 0.15 180);
-  /* Bright teal */
-  --chart-5: oklch(0.8 0.15 240);
-  /* Light blue */
-
-  /* Dark sidebar */
-  --sidebar: oklch(0.14 0.02 240);
-  --sidebar-foreground: oklch(0.9 0.01 240);
-  --sidebar-primary: oklch(0.65 0.2 240);
-  --sidebar-primary-foreground: oklch(0.12 0.02 240);
-  --sidebar-accent: oklch(0.25 0.05 180);
-  --sidebar-accent-foreground: oklch(0.85 0.08 180);
-  --sidebar-border: oklch(0.3 0.03 240);
-  --sidebar-ring: oklch(0.65 0.2 240);
+  /* Sidebar dark */
+  --sidebar: #334155;
+  /* Charcoal */
+  --sidebar-foreground: #F8FAFC;
+  /* Seasalt */
+  --sidebar-primary: #D97706;
+  /* Ochre as accent */
+  --sidebar-primary-foreground: #FFFFFF;
+  /* White */
+  --sidebar-accent: #64748B;
+  /* Slate gray */
+  --sidebar-accent-foreground: #F8FAFC;
+  /* Seasalt */
+  --sidebar-border: rgba(248, 250, 252, 0.1);
+  /* Subtle border */
+  --sidebar-ring: #D97706;
+  /* Orange */
 }
 
 @layer base {
@@ -194,33 +210,6 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-
-  /* Banking-specific utility classes */
-  .bg-success {
-    background-color: hsl(var(--success));
-    color: hsl(var(--success-foreground));
-  }
-
-  .bg-warning {
-    background-color: hsl(var(--warning));
-    color: hsl(var(--warning-foreground));
-  }
-
-  .text-success {
-    color: hsl(var(--success));
-  }
-
-  .text-warning {
-    color: hsl(var(--warning));
-  }
-
-  .border-success {
-    border-color: hsl(var(--success));
-  }
-
-  .border-warning {
-    border-color: hsl(var(--warning));
+    @apply bg-background text-foreground;
   }
 }
