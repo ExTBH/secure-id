@@ -37,10 +37,12 @@ export default function QrDemoPage() {
               <div className="text-xs text-muted-foreground mb-3">
                 Example: Scan to authorize payment at NBB Bank
               </div>
-              <Button size="sm" className="w-full" disabled>
-                <QrCode className="w-4 h-4 mr-2" />
-                Start User Simulation
-              </Button>
+              <Link href="/qr-demo/scanner" passHref legacyBehavior>
+                <Button size="sm" className="w-full">
+                  <QrCode className="w-4 h-4 mr-2" />
+                  Start User Simulation
+                </Button>
+              </Link>
             </div>
 
             {/* Service Provider Simulator */}
