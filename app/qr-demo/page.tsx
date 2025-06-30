@@ -56,10 +56,12 @@ export default function QrDemoPage() {
               <div className="text-xs text-muted-foreground mb-3">
                 Example: Display QR for eGov service login
               </div>
-              <Button size="sm" className="w-full" disabled>
-                <QrCode className="w-4 h-4 mr-2" />
-                Generate QR Code
-              </Button>
+              <Link href="/qr-demo/provider" passHref legacyBehavior>
+                <Button size="sm" className="w-full">
+                  <QrCode className="w-4 h-4 mr-2" />
+                  Generate QR Code
+                </Button>
+              </Link>
             </div>
           </div>
           {/* Navigation */}
