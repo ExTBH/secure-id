@@ -59,7 +59,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="secondary"
-                className="w-full h-12 font-medium"
+                className="w-full h-12 font-medium mb-3"
               >
                 <QrCode className="w-4 h-4 mr-2" />
                 QR Auth Flow
