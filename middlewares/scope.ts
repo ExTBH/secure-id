@@ -1,4 +1,4 @@
-import { auth } from '@/auth'
+import { auth } from '@/lib/auth'
 import { TJWTScope } from '@/schemas'
 import { Session } from 'next-auth'
 import { NextRequest, NextResponse } from 'next/server'
