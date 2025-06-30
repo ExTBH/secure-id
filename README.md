@@ -24,7 +24,6 @@ Bahrain Polytechnic
 - [Security](#security)
 - [Business Model](#business-model)
 - [Team](#team)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## 🌟 Overview
@@ -325,6 +324,7 @@ const SIdNumber = z
 
 **Natheer Zaher Jaffar Ahmed Mohammed Radhi** - CTO & Backend Developer
 
+- ID: 202200480
 - Expertise: Systems architecture, cloud infrastructure, security implementation
 - Responsibilities: Backend APIs, cloud deployment, security protocols
 
@@ -357,24 +357,6 @@ const SIdNumber = z
 - **Enhanced security** with quantum-resistant protection
 - **Privacy control** through zero-knowledge architecture
 - **Cross-platform continuity** across all devices
-
-## 🤝 Contributing
-
-We welcome contributions to SecureID! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Follow TypeScript best practices
-- Ensure all components are properly typed
-- Add Zod validation for new API endpoints
-- Maintain accessibility standards (WCAG 2.1)
-- Test on both light and dark themes
 
 ## 📜 License
 
