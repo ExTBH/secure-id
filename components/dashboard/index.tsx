@@ -2,6 +2,7 @@
 
 import { Home, Shield, User } from 'lucide-react'
 import { useState } from 'react'
+import { AppsTab } from './apps'
 import { HomeTab } from './home'
 import { TabItem } from './types'
 
@@ -17,7 +18,7 @@ const tabs: TabItem[] = [
     id: 'apps',
     label: 'Authorized Apps',
     icon: Shield,
-    content: 'Authorized apps content coming soon...',
+    content: <AppsTab />,
   },
   {
     id: 'profile',
