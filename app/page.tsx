@@ -65,14 +65,16 @@ export default function Home() {
                 QR Auth Flow
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full h-12 font-medium"
-            >
-              <Smartphone className="w-4 h-4 mr-2" />
-              Native App Auth
-            </Button>
+            <Link href="/native-demo" passHref>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full h-12 font-medium"
+              >
+                <Smartphone className="w-4 h-4 mr-2" />
+                Native App Auth
+              </Button>
+            </Link>
           </div>
 
           {/* Trust Indicators */}
