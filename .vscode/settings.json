@@ -15,5 +15,8 @@
     },
     "[javascriptreact]": {
         "editor.formatOnSave": true
+    },
+    "[ignore]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
     }
 }
