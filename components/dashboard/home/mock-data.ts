@@ -3,40 +3,60 @@ import { AuthRequest } from './types'
 export const mockRequests: AuthRequest[] = [
   {
     id: '1',
-    serviceName: 'NBB Bank',
-    serviceIcon: '🏦',
+    serviceName: 'البنك الأهلي المتحد - AUB',
+    serviceIcon: 'AUB',
     requestType: 'withdrawal',
-    amount: 100.0,
+    amount: 50.0,
     timestamp: new Date(Date.now() - 2 * 60 * 1000), // 2 minutes ago
-    description: 'Withdrawal request from your savings account',
+    description: 'Withdrawal authorization request',
     status: 'pending',
   },
   {
     id: '2',
-    serviceName: 'ShopMart',
-    serviceIcon: '🛍️',
-    requestType: 'login',
+    serviceName: 'بنك البحرين الوطني - NBB',
+    serviceIcon: 'NBB',
+    requestType: 'payment',
+    amount: 125.0,
     timestamp: new Date(Date.now() - 15 * 60 * 1000), // 15 minutes ago
-    description: 'Login request from new device (iPhone 15)',
+    description: 'Payment authorization request',
     status: 'pending',
   },
   {
     id: '3',
-    serviceName: 'MediCare Portal',
-    serviceIcon: '🏥',
-    requestType: 'access',
+    serviceName: 'بنك البحرين الإسلامي - BISB',
+    serviceIcon: 'BISB',
+    requestType: 'transfer',
+    amount: 200.0,
     timestamp: new Date(Date.now() - 45 * 60 * 1000), // 45 minutes ago
-    description: 'Request to access your medical records',
+    description: 'Fund transfer authorization',
     status: 'pending',
   },
   {
     id: '4',
-    serviceName: 'Utility Company',
-    serviceIcon: '⚡',
-    requestType: 'payment',
-    amount: 85.5,
+    serviceName: 'البوابة الوطنية - eGov',
+    serviceIcon: 'GOV',
+    requestType: 'access',
+    timestamp: new Date(Date.now() - 60 * 60 * 1000), // 1 hour ago
+    description: 'Request to access government services',
+    status: 'pending',
+  },
+  {
+    id: '5',
+    serviceName: 'تمكين - Tamkeen',
+    serviceIcon: 'TAM',
+    requestType: 'verification',
     timestamp: new Date(Date.now() - 90 * 60 * 1000), // 90 minutes ago
-    description: 'Monthly electricity bill payment',
+    description: 'Employment benefit verification request',
+    status: 'pending',
+  },
+  {
+    id: '6',
+    serviceName: 'stc البحرين',
+    serviceIcon: 'STC',
+    requestType: 'payment',
+    amount: 25.0,
+    timestamp: new Date(Date.now() - 120 * 60 * 1000), // 2 hours ago
+    description: 'Monthly telecom bill payment',
     status: 'pending',
   },
 ]

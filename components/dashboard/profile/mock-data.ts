@@ -1,14 +1,14 @@
 import { AccountAction, LoginSession, UserProfile } from './types'
 
 export const mockUserProfile: UserProfile = {
-  fullName: 'John Anderson',
-  email: 'john.anderson@email.com',
-  phone: '+1***-***-7890',
-  idNumber: '***-**-1234',
-  dateOfBirth: new Date('1985-06-15'),
+  fullName: 'Ahmed Al-Mansouri',
+  email: 'ahmed.almansouri@email.com',
+  phone: '+973 ***-***90',
+  idNumber: '***-***-123',
+  dateOfBirth: new Date('1988-04-22'),
   address: {
-    city: 'New York',
-    state: 'NY',
+    city: 'Manama',
+    state: 'Capital Governorate',
     masked: '***',
   },
   memberSince: new Date('2023-01-15'),
@@ -27,38 +27,38 @@ export const mockLoginSessions: LoginSession[] = [
   {
     id: '1',
     timestamp: new Date(Date.now() - 2 * 60 * 1000), // 2 minutes ago
-    device: 'Chrome on MacOS',
-    location: 'New York, NY',
-    ipAddress: '192.168.***.***',
+    device: 'Safari on iPhone 14 Pro',
+    location: 'Manama, Capital Governorate',
+    ipAddress: '84.255.***.***', // Batelco IP
     isCurrentSession: true,
   },
   {
     id: '2',
     timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000), // 1 day ago
-    device: 'Safari on iPhone',
-    location: 'New York, NY',
-    ipAddress: '192.168.***.***',
+    device: 'Chrome on MacBook',
+    location: 'Manama, Capital Governorate',
+    ipAddress: '84.255.***.***', // Batelco IP
   },
   {
     id: '3',
     timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000), // 3 days ago
-    device: 'Firefox on Windows',
-    location: 'Boston, MA',
-    ipAddress: '172.16.***.***',
+    device: 'Samsung Galaxy S23',
+    location: 'Riffa, Southern Governorate',
+    ipAddress: '94.76.***.***', // Zain IP
   },
   {
     id: '4',
     timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000), // 5 days ago
     device: 'Chrome on Windows',
-    location: 'Chicago, IL',
-    ipAddress: '10.0.***.***',
+    location: 'Muharraq, Muharraq Governorate',
+    ipAddress: '37.131.***.***', // STC IP
   },
   {
     id: '5',
     timestamp: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000), // 7 days ago
-    device: 'Safari on iPad',
-    location: 'New York, NY',
-    ipAddress: '192.168.***.***',
+    device: 'Safari on iPad Pro',
+    location: 'Manama, Capital Governorate',
+    ipAddress: '84.255.***.***', // Batelco IP
   },
 ]
 
@@ -78,19 +78,19 @@ export const mockAccountActions: AccountAction[] = [
   {
     id: '3',
     type: 'profile_update',
-    description: 'Updated phone number',
+    description: 'Updated mobile number',
     timestamp: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000), // 7 days ago
   },
   {
     id: '4',
     type: 'authorization',
-    description: 'Authorized NBB Bank app',
+    description: 'بنك البحرين الوطني - Authorized NBB Mobile Banking',
     timestamp: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000), // 14 days ago
   },
   {
     id: '5',
     type: 'profile_update',
-    description: 'Updated address information',
+    description: 'Updated address in Capital Governorate',
     timestamp: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), // 30 days ago
   },
 ]

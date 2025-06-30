@@ -37,7 +37,7 @@ export function ProfileHeader({ profile }: ProfileHeaderProps) {
           </Avatar>
 
           <div className="space-y-2">
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-2">
               <h2 className="text-2xl font-semibold">{profile.fullName}</h2>
               {profile.isVerified && (
                 <Badge
