@@ -1,5 +1,11 @@
 export type AuthRequestStatus = 'pending' | 'approved' | 'rejected'
-export type AuthRequestType = 'withdrawal' | 'login' | 'access' | 'payment'
+export type AuthRequestType =
+  | 'withdrawal'
+  | 'login'
+  | 'access'
+  | 'payment'
+  | 'transfer'
+  | 'verification'
 
 export interface AuthRequest {
   id: string
