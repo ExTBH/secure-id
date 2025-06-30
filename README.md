@@ -2,12 +2,12 @@
 
 ![SecureID Logo](./public/logo.png)
 
-A revolutionary digital identity verification platform designed specifically for Bahrain's rapidly evolving fintech ecosystem. SecureID addresses critical security, cost, and efficiency challenges facing Bahrain's financial institutions and businesses.
+A revolutionary digital identity verification platform developed as academic research for the **Yusuf Bin Ahmed Kanoo Award**. SecureID addresses critical security, cost, and efficiency challenges facing Bahrain's financial institutions and businesses.
 
-## 🏆 Award Recognition
+## 🏆 Research Recognition
 
-**Winner - University Scientific Research Award**  
-_Yusuf Bin Ahmed Kanoo Award_  
+**Academic Research Project**  
+_Submitted for Yusuf Bin Ahmed Kanoo Award_  
 Bahrain Polytechnic
 
 ---
@@ -76,7 +76,6 @@ SecureID provides:
 | **Authentication** | NextAuth.js              | Enterprise authentication with multi-provider support |
 | **Validation**     | Zod                      | Runtime type validation and schema enforcement        |
 | **Styling**        | Tailwind CSS             | Utility-first CSS framework                           |
-| **Deployment**     | Docker                   | Containerized deployment for consistency              |
 
 ### Color Palette
 
@@ -107,26 +106,13 @@ cd secure-id
 npm install
 ```
 
-3. **Set up environment variables**
-
-```bash
-cp .env.example .env.local
-```
-
-Edit `.env.local` with your configuration:
-
-```env
-NEXTAUTH_SECRET=your-super-secret-key
-NEXTAUTH_URL=http://localhost:3000
-```
-
-4. **Run the development server**
+3. **Run the development server**
 
 ```bash
 npm run dev
 ```
 
-5. **Open your browser**
+4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
@@ -400,11 +386,11 @@ For commercial licensing inquiries, please contact the development team.
 
 ## 🏅 Recognition
 
-**Winner - University Scientific Research Award**  
-_Yusuf Bin Ahmed Kanoo Award_  
+**Academic Research Project**  
+_Submitted for Yusuf Bin Ahmed Kanoo Award_  
 Bahrain Polytechnic
 
-This project demonstrates innovation in digital identity solutions with significant potential for enhancing Bahrain's fintech ecosystem and positioning the kingdom as a regional leader in banking security innovation.
+This research project demonstrates innovation in digital identity solutions with significant potential for enhancing Bahrain's fintech ecosystem and positioning the kingdom as a regional leader in banking security innovation.
 
 ---
 
