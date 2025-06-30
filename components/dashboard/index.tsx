@@ -4,6 +4,7 @@ import { Home, Shield, User } from 'lucide-react'
 import { useState } from 'react'
 import { AppsTab } from './apps'
 import { HomeTab } from './home'
+import { ProfileTab } from './profile'
 import { TabItem } from './types'
 
 const tabs: TabItem[] = [
@@ -24,7 +25,7 @@ const tabs: TabItem[] = [
     id: 'profile',
     label: 'Profile',
     icon: User,
-    content: 'Profile content coming soon...',
+    content: <ProfileTab />,
   },
 ]
 
