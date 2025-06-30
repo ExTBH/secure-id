@@ -2,6 +2,7 @@
 
 import { Home, Shield, User } from 'lucide-react'
 import { useState } from 'react'
+import { HomeTab } from './home'
 import { TabItem } from './types'
 
 const tabs: TabItem[] = [
@@ -9,7 +10,7 @@ const tabs: TabItem[] = [
     id: 'home',
     label: 'Home',
     icon: Home,
-    content: 'Home tab content coming soon...',
+    content: <HomeTab />,
     notificationCount: 3,
   },
   {
@@ -30,22 +31,20 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState<string>(tabs[0].id)
 
   return (
-    <div className="w-full max-w-md mx-auto relative min-h-[100dvh]">
+    <div className="w-full mx-auto relative min-h-[100dvh]">
       {/* Tab Panels */}
-      <div className="pb-[76px]">
-        {tabs.map((tab) => (
-          <div
-            key={tab.id}
-            role="tabpanel"
-            id={`${tab.id}-panel`}
-            aria-labelledby={tab.id}
-            hidden={activeTab !== tab.id}
-            className="p-4"
-          >
-            {tab.content}
-          </div>
-        ))}
-      </div>
+      {tabs.map((tab) => (
+        <div
+          key={tab.id}
+          role="tabpanel"
+          id={`${tab.id}-panel`}
+          aria-labelledby={tab.id}
+          hidden={activeTab !== tab.id}
+          className="pb-[76px]"
+        >
+          {tab.content}
+        </div>
+      ))}
 
       {/* Tab List - iOS Style Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 bg-background border-t">
