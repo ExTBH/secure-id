@@ -63,15 +63,19 @@ export function RequestCard({
 
   return (
     <>
-      <Card className="mb-4">
+      <Card className="mb-4 border-border/50 shadow-sm hover:shadow-md transition-shadow">
         <CardHeader className="pb-2">
           <div className="flex items-center gap-3">
-            <Avatar className="h-8 w-8">
-              <AvatarFallback>{request.serviceIcon}</AvatarFallback>
+            <Avatar className="h-8 w-8 bg-primary/10 border border-primary/20">
+              <AvatarFallback className="bg-primary/10 text-primary font-semibold text-xs">
+                {request.serviceIcon}
+              </AvatarFallback>
             </Avatar>
             <div>
-              <CardTitle className="text-base">{request.serviceName}</CardTitle>
-              <CardDescription className="text-xs">
+              <CardTitle className="text-base text-foreground">
+                {request.serviceName}
+              </CardTitle>
+              <CardDescription className="text-xs text-muted-foreground">
                 {timeAgo(request.timestamp)}
               </CardDescription>
             </div>
@@ -79,10 +83,12 @@ export function RequestCard({
         </CardHeader>
         <CardContent className="pb-2">
           <div className="flex flex-col gap-1">
-            <div className="text-sm font-medium">{request.requestType}</div>
+            <div className="text-sm font-medium text-foreground">
+              {request.requestType}
+            </div>
             {request.amount && (
-              <div className="text-xl font-semibold">
-                ${request.amount.toFixed(2)}
+              <div className="text-xl font-semibold text-primary">
+                {request.amount.toFixed(2)} BHD
               </div>
             )}
             <p className="text-sm text-muted-foreground">
@@ -94,7 +100,7 @@ export function RequestCard({
           <div className="flex gap-2 w-full">
             <Button
               variant="outline"
-              className="flex-1 text-destructive hover:text-destructive hover:bg-destructive/10"
+              className="flex-1 text-destructive border-destructive/30 hover:text-destructive-foreground hover:bg-destructive hover:border-destructive"
               onClick={() => setIsRejectDialogOpen(true)}
               disabled={isLoading}
             >
@@ -102,7 +108,7 @@ export function RequestCard({
               Reject
             </Button>
             <Button
-              className="flex-1 bg-emerald-600 hover:bg-emerald-700"
+              className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 border-0"
               onClick={() => setIsApproveDialogOpen(true)}
               disabled={isLoading}
             >
@@ -115,14 +121,19 @@ export function RequestCard({
 
       {/* Approve Dialog */}
       <Dialog open={isApproveDialogOpen} onOpenChange={setIsApproveDialogOpen}>
-        <DialogContent>
+        <DialogContent className="border-border">
           <DialogHeader>
-            <DialogTitle>Approve Request</DialogTitle>
-            <DialogDescription>
+            <DialogTitle className="text-foreground">
+              Approve Request
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground">
               Are you sure you want to approve this request from{' '}
-              {request.serviceName}?
+              <span className="font-medium text-foreground">
+                {request.serviceName}
+              </span>
+              ?
               {request.amount &&
-                ` This will authorize a payment of $${request.amount.toFixed(2)}.`}
+                ` This will authorize a payment of ${request.amount.toFixed(2)} BHD.`}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -130,11 +141,12 @@ export function RequestCard({
               variant="outline"
               onClick={() => setIsApproveDialogOpen(false)}
               disabled={isLoading}
+              className="border-border"
             >
               Cancel
             </Button>
             <Button
-              className="bg-emerald-600 hover:bg-emerald-700"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
               onClick={handleApprove}
               disabled={isLoading}
             >
@@ -146,12 +158,17 @@ export function RequestCard({
 
       {/* Reject Dialog */}
       <Dialog open={isRejectDialogOpen} onOpenChange={setIsRejectDialogOpen}>
-        <DialogContent>
+        <DialogContent className="border-border">
           <DialogHeader>
-            <DialogTitle>Reject Request</DialogTitle>
-            <DialogDescription>
+            <DialogTitle className="text-foreground">
+              Reject Request
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground">
               Are you sure you want to reject this request from{' '}
-              {request.serviceName}? This action cannot be undone.
+              <span className="font-medium text-foreground">
+                {request.serviceName}
+              </span>
+              ? This action cannot be undone.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -159,6 +176,7 @@ export function RequestCard({
               variant="outline"
               onClick={() => setIsRejectDialogOpen(false)}
               disabled={isLoading}
+              className="border-border"
             >
               Cancel
             </Button>
@@ -166,6 +184,7 @@ export function RequestCard({
               variant="destructive"
               onClick={handleReject}
               disabled={isLoading}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
             >
               {isLoading ? 'Rejecting...' : 'Confirm Reject'}
             </Button>
